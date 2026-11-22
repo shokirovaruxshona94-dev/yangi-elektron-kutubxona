@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Kutubxona — Elektron Kutubxona Axborot Tizimi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 5-KO'RSATKICH: Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- 7-KO'RSATKICH: Konteynerli menyu (Navbar + Container) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="#">
+                <i class="bi bi-book-half me-2"></i>E-Kutubxona
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kutubxonaMenyu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="kutubxonaMenyu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#slayder">Bosh sahifa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kitoblar">Kitoblar fondi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#katalog">Elektron katalog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#azo">A'zo bo'lish</a></li>
+
+                    <!-- 6-KO'RSATKICH (1-qism): Oddiy Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Bo'limlar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#kitoblar"><i class="bi bi-cpu me-2 text-primary"></i>Axborot texnologiyalari</a></li>
+                            <li><a class="dropdown-item" href="#kitoblar"><i class="bi bi-journal-bookmark me-2 text-success"></i>Badiiy adabiyot</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#kitoblar"><i class="bi bi-mortarboard me-2 text-warning"></i>Ilmiy maqolalar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 6-KO'RSATKICH (2-qism): Button-li Dropdown (Split Button Dropdown) -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning fw-semibold">
+                        <i class="bi bi-person-circle me-1"></i> Kitobxon kabineti
+                    </button>
+                    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                        <span class="visually-hidden">Menyuni ochish</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#katalog">Mening kitoblarim</a></li>
+                        <li><a class="dropdown-item" href="#azo">Ro'yxatdan o'tish</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 10-KO'RSATKICH: Bootstrap Slayder (Carousel) -->
+    <div id="slayder" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slayder" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#slayder" data-bs-slide-to="1"></button></div>
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-primary text-white text-center py-5" style="min-height: 310px;">
+                <div class="container py-4">
+                    <!-- 2-KO'RSATKICH: Matnlarga Bootstrap dizayni -->
+                    <h1 class="display-5 fw-bold">Elektron Kutubxona Axborot Tizimi</h1>
+                    <p class="lead text-light mt-3">Minglab darsliklar, ilmiy qo‘llanmalar va badiiy asarlarni onlayn o‘qing hamda yuklab oling.</p>
+                    <a href="#kitoblar" class="btn btn-warning btn-lg fw-semibold mt-2">
+                        <i class="bi bi-search me-2"></i>Kitoblarni ko'rish
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item bg-dark text-white text-center py-5" style="min-height: 310px;">
+                <div class="container py-4">
+                    <h1 class="display-5 fw-bold text-warning">24/7 Masofaviy Ta'lim Resurslari</h1>
+                    <p class="lead mt-3">Istalgan qurilmadan PDF va EPUB formatdagi adabiyotlarga tezkor kirish imkoniyati.</p>
+                    <a href="#azo" class="btn btn-outline-light btn-lg mt-2">A'zo bo'lish</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slayder" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slayder" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <main class="container my-5">
+
+        <!-- 1-KO'RSATKICH (Moslashuvchanlik: col-12, col-md-6, col-lg-4) va 9-KO'RSATKICH (Panel / Card) -->
+        <section id="kitoblar" class="mb-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary text-uppercase">Yangi qo'shilgan kitoblar</h2>
+                <p class="text-muted">Mobil (1 ustun), Planshet (2 ustun) va Kompyuter (3 ustun) ekranlariga moslashuvchan panellar</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- 1-Panel (Card) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-header bg-primary text-white fw-bold">
+                            <i class="bi bi-code-square me-2"></i>Axborot texnologiyalari
+                        </div>
+                        <!-- 5-KO'RSATKICH: Media fayllarga dizayn berish -->
+                        <img src="https://placehold.co/600x340/0d6efd/ffffff?text=Web+Dasturlash+Asoslari" class="card-img-top img-fluid" alt="Web Dasturlash kitobi">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Dasturlash Asoslari</h5>
+                            <p class="card-text text-muted">HTML5, CSS3 va Bootstrap freymvorki bo‘yicha amaliy qo‘llanma (320 bet).</p>
+                            <!-- 8-KO'RSATKICH: Tooltip -->
+                            <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Format: PDF | Hajmi: 14.5 MB | Nashr yili: 2025">
+                                <i class="bi bi-info-circle me-1"></i>Ma'lumot (Tooltip)
+                            </button>
+                        </div>
+                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-download me-1"></i>1 240 marta</small>
+                            <span class="badge bg-success">Bepul</span>
+                        </div>
+                    </div>
+                </div><!-- 2-Panel (Card) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-success">
+                        <div class="card-header bg-success text-white fw-bold">
+                            <i class="bi bi-database me-2"></i>Ma'lumotlar bazasi
+                        </div>
+                        <img src="https://placehold.co/600x340/198754/ffffff?text=SQL+va+PostgreSQL" class="card-img-top img-fluid" alt="SQL kitobi">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL va Ma'lumotlar Bazasi</h5>
+                            <p class="card-text text-muted">Relyatsion ma’lumotlar bazalarini loyihalash va so‘rovlar yozish darsligi.</p>
+                            <!-- 8-KO'RSATKICH: Popover -->
+                            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="popover" title="Annotatsiya" data-bs-content="Ushbu darslik oliy ta'lim talabalari uchun mo'ljallangan bo'lib, PostgreSQL misolida tushuntirilgan.">
+                                <i class="bi bi-book me-1"></i>Annotatsiya (Popover)
+                            </button>
+                        </div>
+                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-download me-1"></i>890 marta</small>
+                            <span class="badge bg-success">Bepul</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-Panel (Card) -->
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card h-100 shadow-sm border-dark">
+                        <div class="card-header bg-dark text-white fw-bold">
+                            <i class="bi bi-hdd-network me-2"></i>Kompyuter tarmoqlari
+                        </div>
+                        <img src="https://placehold.co/600x340/212529/ffffff?text=Tarmoq+Texnologiyalari" class="card-img-top img-fluid" alt="Tarmoq kitobi">
+                        <div class="card-body">
+                            <h5 class="card-title">Kompyuter Tarmoqlari va OSI</h5>
+                            <p class="card-text text-muted">Tarmoq protokollari, marshrutlash va kiberxavfsizlik asoslari.</p>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="tooltip" title="Format: PDF & EPUB | Muallif: A. Karimov">
+                                <i class="bi bi-file-earmark-pdf me-1"></i>Tafsilot (Tooltip)
+                            </button>
+                        </div>
+                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                            <small class="text-muted"><i class="bi bi-download me-1"></i>650 marta</small>
+                            <span class="badge bg-warning text-dark">Yangi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-KO'RSATKICH: Jadvallar va Ro'yxatlarga dizayn berish -->
+        <section id="katalog" class="row g-4 mb-5">
+            <div class="col-12 col-lg-8">
+                <h3 class="fw-bold mb-3"><i class="bi bi-table me-2 text-primary"></i>Elektron katalog jadvali</h3>
+                <div class="table-responsive shadow-sm rounded">
+                    <table class="table table-striped table-hover table-bordered bg-white mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Kitob nomi</th>
+                                <th>Muallif</th><th>Yo'nalish</th>
+                                <th>Format</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Web Dasturlash Asoslari</td>
+                                <td>S. Rahimov</td>
+                                <td>Dasturlash</td>
+                                <td>PDF</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>SQL va Ma'lumotlar Bazasi</td>
+                                <td>D. Tursunov</td>
+                                <td>Ma'lumotlar bazasi</td>
+                                <td>PDF / DOCX</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Kompyuter Tarmoqlari va OSI</td>
+                                <td>A. Karimov</td>
+                                <td>Tarmoqlar</td>
+                                <td>EPUB / PDF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Ro'yxat (List Group) -->
+            <div class="col-12 col-lg-4">
+                <h3 class="fw-bold mb-3"><i class="bi bi-list-ul me-2 text-warning"></i>Fond statistikasi</h3>
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Elektron darsliklar
+                        <span class="badge bg-primary rounded-pill">1 450</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Ilmiy maqolalar
+                        <span class="badge bg-success rounded-pill">3 200</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Badiiy adabiyotlar
+                        <span class="badge bg-warning text-dark rounded-pill">980</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Audio kitoblar
+                        <span class="badge bg-dark rounded-pill">215</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4-KO'RSATKICH: Formalarga dizayn berish -->
+        <section id="azo" class="card shadow-sm p-4 bg-white">
+            <h3 class="fw-bold mb-3 text-primary"><i class="bi bi-person-plus me-2"></i>Kutubxonaga a'zo bo'lish formasi</h3>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="kitobxonIsm" class="form-label fw-semibold">F.I.Sh.</label>
+                    <input type="text" class="form-control" id="kitobxonIsm" placeholder="Ism va familiyangiz" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="kitobxonEmail" class="form-label fw-semibold">Elektron pochta</label>
+                    <input type="email" class="form-control" id="kitobxonEmail" placeholder="student@university.uz" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="maqom" class="form-label fw-semibold">Foydalanuvchi maqomi</label>
+                    <select class="form-select" id="maqom">
+                        <option selected>Talaba</option>
+                        <option>O'qituvchi</option>
+                        <option>Tadqiqotchi</option></select>
+                </div>
+                <div class="col-md-6">
+                    <label for="guvohnoma" class="form-label fw-semibold">Talabalik ID / Guvohnoma raqami</label>
+                    <input type="text" class="form-control" id="guvohnoma" placeholder="Masalan: ID-2024-001" required>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="qoida" required>
+                        <label class="form-check-label" for="qoida">
+                            Elektron kutubxonadan foydalanish qoidalariga roziman
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="bi bi-check-circle me-2"></i>Ro'yxatdan o'tish
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 E-Kutubxona Axborot Tizimi. Bootstrap 5 yordamida yaratilgan.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tooltip va Popover ni ishga tushirish -->
+    <script>
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+        document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el));
+    </script>
+</body>
+</html>
